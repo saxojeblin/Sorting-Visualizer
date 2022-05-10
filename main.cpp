@@ -4,6 +4,7 @@
 #include <string.h>
 #include "sorts.hpp"
 
+//Populates a pointer array with random values
 void get_random_numbers(int *numbers) {
     //seed the random number generator
     srand(time(NULL));
@@ -14,34 +15,41 @@ void get_random_numbers(int *numbers) {
     }
 }
 
+//Copies the original array's values into the copy array
+void copy_array(int* original, int* copy) {
+    for (int i = 0; i < 50; i++) {
+        copy[i] = original[i];
+    }
+}
+
 void run_sorts() {
     //Genereate our array of numbers to be sorted
-    int *unsorted_numbers = (int*) malloc(sizeof(int) * 50);
+    int *unsorted_numbers = new int[50];
     get_random_numbers(unsorted_numbers);
 
     //Create a temperary array that will be used in the sorts
-    int *temp_numbers = (int*) malloc(sizeof(int) * 50);
+    int *temp_numbers = new int[50];
     
     //Perform each sort
-    //Before each sort, we make sure we are using the originial, unsorted list, hence the memcpy
-    memcpy(temp_numbers, unsorted_numbers, sizeof(int) * 50);
+    //Before each sort, we make sure we are using the originial, unsorted list, hence the array copy
+    copy_array(unsorted_numbers, temp_numbers);
     bubble_sort(temp_numbers);
-
-    memcpy(temp_numbers, unsorted_numbers, sizeof(int) * 50);
+    
+    copy_array(unsorted_numbers, temp_numbers);
     selection_sort(temp_numbers);
 
-    memcpy(temp_numbers, unsorted_numbers, sizeof(int) * 50);
+    copy_array(unsorted_numbers, temp_numbers);
     insertion_sort(temp_numbers);
 
-    memcpy(temp_numbers, unsorted_numbers, sizeof(int) * 50);
+    copy_array(unsorted_numbers, temp_numbers);
     quick_sort(temp_numbers);
 
-    memcpy(temp_numbers, unsorted_numbers, sizeof(int) * 50);
+    copy_array(unsorted_numbers, temp_numbers);
     merge_sort(temp_numbers);
 
     //Free our allocated arrays of numbers
-    free(unsorted_numbers);
-    free(temp_numbers);
+    delete(unsorted_numbers);
+    delete(temp_numbers);
 }
 
 int main() {
