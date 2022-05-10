@@ -4,6 +4,9 @@
 #include <string.h>
 #include "sorts.hpp"
 
+#define LOWINDEX 0
+#define HIGHINDEX 50
+
 //Populates a pointer array with random values
 void get_random_numbers(int *numbers) {
     //seed the random number generator
@@ -42,7 +45,7 @@ void run_sorts() {
     insertion_sort(temp_numbers);
 
     copy_array(unsorted_numbers, temp_numbers);
-    quick_sort(temp_numbers);
+    quick_sort(temp_numbers, LOWINDEX, HIGHINDEX);
 
     //Free our allocated arrays of numbers
     delete(unsorted_numbers);

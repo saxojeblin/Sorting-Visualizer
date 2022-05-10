@@ -69,8 +69,31 @@ void insertion_sort (int* numbers) {
     }
 }
 
-void quick_sort (int *numbers) {
-    
+int repartition(int* numbers, int low_index, int high_index) {
+    int pivot_number = numbers[high_index];
+    int pivot_index  = low_index;
+
+    for (int i = low_index; i < high_index; i++) {
+        if (numbers[i] < pivot_number) {
+            swap_numbers(numbers, pivot_index, i);
+            pivot_index++;
+        }
+    }
+
+    swap_numbers(numbers, pivot_index, high_index);
+    return pivot_index;
+}
+
+void quick_sort (int *numbers, int low_index, int high_index) {
+    int pivot_index = repartition(numbers, low_index, high_index);
+
+    if (pivot_index - 1 > low_index) {
+        quick_sort(numbers, low_index, pivot_index - 1);
+    }
+
+    if (high_index > pivot_index + 1) {
+        quick_sort(numbers, pivot_index + 1, high_index);
+    }
 }
 
 //Test function to print original, unsorted list
