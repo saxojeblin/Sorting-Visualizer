@@ -18,7 +18,18 @@ void bubble_sort (int *numbers) {
 }
 
 void selection_sort (int *numbers) {
-    
+    int current_minimum, i, j;
+    for (i = 0; i < 50; i++) {
+        current_minimum = i;
+        for (j = i; j < 50; j++) {
+            if (numbers[j] < numbers[current_minimum]) {
+                current_minimum = j;
+            }
+        }
+        if (current_minimum != i) {
+            swap_numbers(numbers, i, current_minimum);
+        }
+    }
 }
 
 void insertion_sort (int *numbers) {

@@ -44,9 +44,6 @@ void run_sorts() {
     copy_array(unsorted_numbers, temp_numbers);
     quick_sort(temp_numbers);
 
-    copy_array(unsorted_numbers, temp_numbers);
-    merge_sort(temp_numbers);
-
     //Free our allocated arrays of numbers
     delete(unsorted_numbers);
     delete(temp_numbers);
