@@ -32,8 +32,41 @@ void selection_sort (int *numbers) {
     }
 }
 
-void insertion_sort (int *numbers) {
-    
+int find_position (int *numbers, int low_index, int high_index, int current_number) {
+    int position = high_index - 1;
+
+    while (position >= low_index && numbers[position] > current_number) {
+        position--;
+    }
+
+    position++;
+
+    return position;
+}
+
+void insert_number(int* numbers, int position, int high_index, int value) {
+    //Push elements after position index down the array
+    for (int i = high_index; i > position; i-- ) {
+        numbers[i] = numbers[i-1];
+    }
+    //Insert value into position
+    numbers[position] = value;
+}
+
+void insertion_sort (int* numbers) {
+    int position, temp_number, i, j;
+
+    for (i = 1; i < 50; i++) {
+        //Grab the value for the current number
+        temp_number = numbers[i];
+
+        //Find the index where the value needs to be inserted
+        position = find_position(numbers, 0, i, temp_number);
+
+        if (position != i) {
+            insert_number(numbers, position, i, temp_number);
+        }
+    }
 }
 
 void quick_sort (int *numbers) {
