@@ -25,6 +25,7 @@ void copy_array(int* original, int* copy) {
     }
 }
 
+//Core function to run each sorting algorithm
 void run_sorts() {
     //Genereate our array of numbers to be sorted
     int *unsorted_numbers = new int[50];
@@ -33,8 +34,10 @@ void run_sorts() {
     //Create a temperary array that will be used in the sorts
     int *temp_numbers = new int[50];
     
-    //Perform each sort
-    //Before each sort, we make sure we are using the originial, unsorted list, hence the array copy
+    /* Perform each sort.
+       Before each sort, we set the temp array equal to the original values,
+       since we don't want to sort an array that has already been sorted. */
+
     copy_array(unsorted_numbers, temp_numbers);
     bubble_sort(temp_numbers);
     
