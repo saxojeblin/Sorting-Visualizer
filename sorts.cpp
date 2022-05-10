@@ -17,6 +17,18 @@ void bubble_sort (int *numbers) {
     }
 }
 
+void selection_sort (int *numbers) {
+    
+}
+
+void insertion_sort (int *numbers) {
+    
+}
+
+void quick_sort (int *numbers) {
+    
+}
+
 //Test function to print original, unsorted list
 void print_unsorted_array(int *numbers) {
     std::cout << "UNSORTED LIST:\n";
