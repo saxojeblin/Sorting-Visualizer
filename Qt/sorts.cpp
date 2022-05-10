@@ -16,7 +16,7 @@ int find_position (int *numbers, int low_index, int high_index, int current_numb
     while (position >= low_index && numbers[position] > current_number) {
         position--;
     }
-    
+
     //Lastly, increase position by 1
     position++;
 
@@ -123,7 +123,7 @@ void quick_sort (int *numbers, int low_index, int high_index) {
 void print_unsorted_array(int *numbers) {
     std::cout << "UNSORTED LIST:\n";
     for(int i =0; i < 50; i++) {
-        std::cout << "Number "<< i + 1 << ": " << numbers[i] << "\n"; 
+        std::cout << "Number "<< i + 1 << ": " << numbers[i] << "\n";
     }
 }
 
@@ -141,6 +141,6 @@ void print_sorted_array(int *numbers) {
 
     if (!sorted_status) {
             std::cout <<"\n THE ARRAY IS NOT SORTED";
-        } 
-    else std::cout << "\n THE ARRAY IS SORTED"; 
+        }
+    else std::cout << "\n THE ARRAY IS SORTED";
 }

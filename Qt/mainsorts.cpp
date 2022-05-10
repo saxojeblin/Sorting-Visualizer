@@ -51,8 +51,8 @@ void run_sorts() {
     quick_sort(temp_numbers, LOWINDEX, HIGHINDEX);
 
     //Free our allocated arrays of numbers
-    delete(unsorted_numbers);
-    delete(temp_numbers);
+    delete[](unsorted_numbers);
+    delete[](temp_numbers);
 }
 
 int main() {
