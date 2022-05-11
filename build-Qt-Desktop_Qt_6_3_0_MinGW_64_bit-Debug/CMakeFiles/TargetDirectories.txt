@@ -1,5 +1,0 @@
-D:/Sorting-Visualizer/build-Qt-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-D:/Sorting-Visualizer/build-Qt-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/CMakeFiles/Qt.dir
-D:/Sorting-Visualizer/build-Qt-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-D:/Sorting-Visualizer/build-Qt-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/CMakeFiles/Qt_autogen_timestamp_deps.dir
-D:/Sorting-Visualizer/build-Qt-Desktop_Qt_6_3_0_MinGW_64_bit-Debug/CMakeFiles/Qt_autogen.dir
