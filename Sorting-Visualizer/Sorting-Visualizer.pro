@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,10 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    mainsorts.cpp \
+    sorts.cpp \
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    sorts.hpp \
 
 FORMS += \
     mainwindow.ui

@@ -12,11 +12,11 @@
 //Populates a pointer array with random values
 void get_random_numbers(int *numbers) {
 
-    //fill each index of array with a random number from 1-99
+    //fill each index of array with numbers in order
     for (int i = 0; i < 50; i++) {
-        numbers[i] = i + 1;
+        numbers[i] = 30 + 6 * i;
     }
-    
+    //randomly shuffle the array
     std::random_shuffle(numbers, numbers + 49);
 }
 
@@ -57,8 +57,4 @@ void run_sorts() {
     //Free our allocated arrays of numbers
     delete[](unsorted_numbers);
     delete[](temp_numbers);
-}
-
-int main() {
-    run_sorts();
 }

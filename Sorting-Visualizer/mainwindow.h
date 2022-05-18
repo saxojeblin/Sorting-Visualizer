@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtCharts>
+#include <QChartView>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +16,17 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    void on_bubbleButton_clicked();
+
+    void on_selectionButton_clicked();
+
+    void on_insertionButton_clicked();
+
+    void on_quickButton_clicked();
+
+    void on_randomizeButton_clicked();
 
 private:
     Ui::MainWindow *ui;
