@@ -28,6 +28,10 @@ private slots:
 
     void on_randomizeButton_clicked();
 
+    void on_exitButton_clicked();
+
+    void edit_bar_length(int barNumber, int height);
+
 private:
     Ui::MainWindow *ui;
 };

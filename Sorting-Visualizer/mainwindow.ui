@@ -29,6 +29,9 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>Bubble Sort</string>
     </property>
@@ -47,6 +50,9 @@
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="text">
      <string>Insertion Sort</string>
@@ -67,6 +73,9 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>Quick Sort</string>
     </property>
@@ -86,6 +95,9 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>Selection Sort</string>
     </property>
@@ -99,6 +111,9 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="text">
      <string>Randomize</string>
     </property>
@@ -111,6 +126,9 @@
       <width>91</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="text">
      <string>Exit</string>
@@ -247,9 +265,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>60</y>
+      <y>110</y>
       <width>16</width>
-      <height>301</height>
+      <height>250</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -271,7 +289,7 @@
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="Line" name="num3_2">
+   <widget class="Line" name="num3">
     <property name="geometry">
      <rect>
       <x>40</x>
