@@ -11,7 +11,7 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    mainsorts.cpp \
+    number_arrays.cpp \
     sorts.cpp \
 
 HEADERS += \
