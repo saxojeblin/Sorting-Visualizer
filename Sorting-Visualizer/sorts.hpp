@@ -9,6 +9,9 @@ void get_random_numbers(int *numbers);
 void copy_array(int *original, int *copy);
 int find_yVal(int height);
 
+//Delay function
+void delay(int mseconds);
+
 //(Temp functions for testing)
 void print_unsorted_array(int *numbers);
 void print_sorted_array(int *numbers);

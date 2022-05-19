@@ -21,13 +21,16 @@ MainWindow::~MainWindow()
 void MainWindow::on_bubbleButton_clicked()
 {
     ui->displayLabel->setText("Performing bubble sort...");
-    edit_bar_length(0, 300);
+    bubble_sort(numbers);
+    ui->displayLabel->setText("Bubble sort complete.");
 }
 
 /* Selection Sort button */
 void MainWindow::on_selectionButton_clicked()
 {
     ui->displayLabel->setText("Performing Selection sort...");
+    selection_sort(numbers);
+    ui->displayLabel->setText("Selection sort complete.");
 }
 
 /* Insertion Sort button */
@@ -215,6 +218,7 @@ void MainWindow::edit_bar_length(int barNumber, int height)
     };
 }
 
+/* Exit program and free allocated memory */
 void MainWindow::on_exitButton_clicked()
 {
     delete[]numbers;

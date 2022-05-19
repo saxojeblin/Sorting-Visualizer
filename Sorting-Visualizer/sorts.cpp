@@ -1,8 +1,11 @@
 #include <iostream>
 #include "sorts.hpp"
+#include "mainwindow.h"
 
 /* Swaps two numbers in two indices in an array */
-void swap_numbers(int *numbers, int index1, int index2) {
+void MainWindow::swap_numbers(int *numbers, int index1, int index2) {
+    edit_bar_length(index1, numbers[index2]);
+    edit_bar_length(index2, numbers[index1]);
     int temp = numbers[index2];
     numbers[index2] = numbers[index1];
     numbers[index1] = temp;
@@ -34,7 +37,7 @@ void insert_number(int* numbers, int position, int high_index, int value) {
 }
 
 /* Finds a pivot index for quick sort */
-int repartition(int* numbers, int low_index, int high_index) {
+int MainWindow::repartition(int* numbers, int low_index, int high_index) {
     int pivot_number = numbers[high_index];
     int pivot_index  = low_index;
 
@@ -50,7 +53,7 @@ int repartition(int* numbers, int low_index, int high_index) {
 }
 
 /* -------Bubble Sort------- */
-void bubble_sort (int *numbers) {
+void MainWindow::bubble_sort (int *numbers) {
     //Iterate through the array from the end
     for(int i = 49; i >= 0; i--) {
         //Itereate through the array from the beginning to 'i'
@@ -60,12 +63,13 @@ void bubble_sort (int *numbers) {
             if (numbers[j] > numbers[j+1]) {
                 swap_numbers(numbers, j, j + 1);
             }
+            delay(15);
         }
     }
 }
 
 /* -------Selection Sort------- */
-void selection_sort (int *numbers) {
+void MainWindow::selection_sort (int *numbers) {
     int current_minimum, i, j;
     //Iterate through the array
     for (i = 0; i < 50; i++) {
@@ -75,6 +79,7 @@ void selection_sort (int *numbers) {
             if (numbers[j] < numbers[current_minimum]) {
                 current_minimum = j;
             }
+            delay(15);
         }
         //Place the smallest value in the front
         if (current_minimum != i) {
@@ -84,8 +89,8 @@ void selection_sort (int *numbers) {
 }
 
 /* -------Insertion Sort------- */
-void insertion_sort (int* numbers) {
-    int position, temp_number, i, j;
+void MainWindow::insertion_sort (int* numbers) {
+    int position, temp_number, i;
 
     //Iterate through the array
     for (i = 1; i < 50; i++) {
@@ -103,7 +108,7 @@ void insertion_sort (int* numbers) {
 }
 
 /* -------Quick Sort------- */
-void quick_sort (int *numbers, int low_index, int high_index) {
+void MainWindow::quick_sort (int *numbers, int low_index, int high_index) {
     //Find pivot index
     int pivot_index = repartition(numbers, low_index, high_index);
 
@@ -117,6 +122,12 @@ void quick_sort (int *numbers, int low_index, int high_index) {
         //Recursive call quick sort, passing the numbers to the RIGHT of the pivot
         quick_sort(numbers, pivot_index + 1, high_index);
     }
+}
+
+void delay(int mseconds) {
+    QTime dieTime= QTime::currentTime().addMSecs(mseconds);
+    while (QTime::currentTime() < dieTime)
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }
 
 //Test function to print original, unsorted list
