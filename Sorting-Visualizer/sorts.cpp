@@ -46,12 +46,13 @@ int MainWindow::repartition(int* numbers, int low_index, int high_index) {
     int pivot_index  = low_index;
 
     for (int i = low_index; i < high_index; i++) {
+        delay(20);
         if (numbers[i] < pivot_number) {
             swap_numbers(numbers, pivot_index, i);
             pivot_index++;
         }
     }
-
+    delay(10);
     swap_numbers(numbers, pivot_index, high_index);
     return pivot_index;
 }
@@ -126,36 +127,4 @@ void MainWindow::quick_sort (int *numbers, int low_index, int high_index) {
         //Recursive call quick sort, passing the numbers to the RIGHT of the pivot
         quick_sort(numbers, pivot_index + 1, high_index);
     }
-}
-
-void delay(int mseconds) {
-    QTime dieTime= QTime::currentTime().addMSecs(mseconds);
-    while (QTime::currentTime() < dieTime)
-            QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
-}
-
-//Test function to print original, unsorted list
-void print_unsorted_array(int *numbers) {
-    std::cout << "UNSORTED LIST:\n";
-    for(int i =0; i < 50; i++) {
-        std::cout << "Number "<< i + 1 << ": " << numbers[i] << "\n";
-    }
-}
-
-//Test function to see if list is sorted
-void print_sorted_array(int *numbers) {
-    std::cout << "\nSORTED LIST:\n";
-    bool sorted_status = true;
-
-    for(int i =0; i < 50; i++) {
-        std::cout << "Number "<< i + 1 << ": " << numbers[i] << "\n";
-        if (numbers[i] > numbers[i+1] && i != 49) {
-            sorted_status = false;
-        }
-    }
-
-    if (!sorted_status) {
-            std::cout <<"\n THE ARRAY IS NOT SORTED";
-        }
-    else std::cout << "\n THE ARRAY IS SORTED";
 }

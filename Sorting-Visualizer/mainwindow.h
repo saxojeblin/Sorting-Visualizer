@@ -23,7 +23,7 @@ private slots:
     void on_selectionButton_clicked();
     void on_insertionButton_clicked();
     void on_quickButton_clicked();
-    void on_randomizeButton_clicked();
+    void on_randomizeButton_clicked(bool startup);
     void on_exitButton_clicked();
     /* Sorting visuals and helpers*/
     void edit_bar_length(int barNumber, int height);
