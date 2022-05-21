@@ -13,6 +13,7 @@ SOURCES += \
     mainwindow.cpp \
     number_arrays.cpp \
     sorts.cpp \
+    visuals.cpp
 
 HEADERS += \
     mainwindow.h \
