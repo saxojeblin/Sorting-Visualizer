@@ -29,6 +29,8 @@ private slots:
     void edit_bar_length(int barNumber, int height);
     void swap_numbers(int *numbers, int index1, int index);
     int repartition(int* numbers, int low_index, int high_index);
+    void insert_number(int* numbers, int position, int high_index, int value);
+    void hide_unhide_buttons(bool hide);
     /* Core sorting algorithms */
     void bubble_sort(int *numbers);
     void selection_sort(int *numbers);

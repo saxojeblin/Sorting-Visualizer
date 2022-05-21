@@ -27,13 +27,17 @@ int find_position (int *numbers, int low_index, int high_index, int current_numb
 }
 
 /* Inserts a value into an array and pushes other elements over */
-void insert_number(int* numbers, int position, int high_index, int value) {
+void MainWindow::insert_number(int* numbers, int position, int high_index, int value) {
     //Push elements after position index down the array
     for (int i = high_index; i > position; i-- ) {
+        edit_bar_length(i, numbers[i-1]);
         numbers[i] = numbers[i-1];
+        delay(15);
     }
     //Insert value into position
+    edit_bar_length(position, value);
     numbers[position] = value;
+
 }
 
 /* Finds a pivot index for quick sort */
@@ -63,7 +67,7 @@ void MainWindow::bubble_sort (int *numbers) {
             if (numbers[j] > numbers[j+1]) {
                 swap_numbers(numbers, j, j + 1);
             }
-            delay(15);
+            delay(10);
         }
     }
 }
@@ -79,11 +83,11 @@ void MainWindow::selection_sort (int *numbers) {
             if (numbers[j] < numbers[current_minimum]) {
                 current_minimum = j;
             }
-            delay(15);
         }
         //Place the smallest value in the front
         if (current_minimum != i) {
             swap_numbers(numbers, i, current_minimum);
+            delay(150);
         }
     }
 }

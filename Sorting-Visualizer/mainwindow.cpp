@@ -20,23 +20,31 @@ MainWindow::~MainWindow()
 /* Bubble Sort button */
 void MainWindow::on_bubbleButton_clicked()
 {
+    hide_unhide_buttons(false);
     ui->displayLabel->setText("Performing bubble sort...");
     bubble_sort(numbers);
     ui->displayLabel->setText("Bubble sort complete.");
+    hide_unhide_buttons(true);
 }
 
 /* Selection Sort button */
 void MainWindow::on_selectionButton_clicked()
 {
+    hide_unhide_buttons(false);
     ui->displayLabel->setText("Performing Selection sort...");
     selection_sort(numbers);
     ui->displayLabel->setText("Selection sort complete.");
+    hide_unhide_buttons(true);
 }
 
 /* Insertion Sort button */
 void MainWindow::on_insertionButton_clicked()
 {
+    hide_unhide_buttons(false);
     ui->displayLabel->setText("Performing Insertion sort...");
+    insertion_sort(numbers);
+    ui->displayLabel->setText("Insertion sort complete.");
+    hide_unhide_buttons(true);
 }
 
 /* Quick Sort button */
@@ -60,7 +68,7 @@ void MainWindow::edit_bar_length(int barNumber, int height)
     int xVal = barNumber * 10 + 20;
     /* Because there are 50 different bars with unique identifiers,
      * we need 50 if statements depending on the bar we want to edit.
-     * Since so many 'if' statements can be hard to read, we'll use a
+     * Since so many 'if' statements can be hard to read and is slow, we'll use a
      * switch statement instead. Apologies for the bulkiness.
      */
     switch(barNumber)
@@ -224,3 +232,10 @@ void MainWindow::on_exitButton_clicked()
     delete[]numbers;
 }
 
+void MainWindow::hide_unhide_buttons(bool hide) {
+    ui->bubbleButton->setVisible(hide);
+    ui->selectionButton->setVisible(hide);
+    ui->insertionButton->setVisible(hide);
+    ui->quickButton->setVisible(hide);
+    ui->randomizeButton->setVisible(hide);
+}
