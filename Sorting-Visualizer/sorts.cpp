@@ -37,7 +37,6 @@ void MainWindow::insert_number(int* numbers, int position, int high_index, int v
     //Insert value into position
     edit_bar_length(position, value);
     numbers[position] = value;
-
 }
 
 /* Finds a pivot index for quick sort */
@@ -70,6 +69,7 @@ void MainWindow::bubble_sort (int *numbers) {
             }
             delay(10);
         }
+        mark_sorted(i, true);
     }
 }
 
@@ -88,8 +88,10 @@ void MainWindow::selection_sort (int *numbers) {
         //Place the smallest value in the front
         if (current_minimum != i) {
             swap_numbers(numbers, i, current_minimum);
+            mark_sorted(i, true);
             delay(150);
         }
+        mark_sorted(i, true);
     }
 }
 
@@ -109,6 +111,10 @@ void MainWindow::insertion_sort (int* numbers) {
         if (position != i) {
             insert_number(numbers, position, i, temp_number);
         }
+    }
+    for (i = 49; i >=0; i--) {
+        mark_sorted(i, true);
+        delay(12);
     }
 }
 

@@ -53,6 +53,10 @@ void MainWindow::on_quickButton_clicked()
     hide_unhide_buttons(false);
     ui->displayLabel->setText("Performing Quick sort...");
     quick_sort(numbers, 0, 49);
+    for (int i = 0; i < 50; i++) {
+        mark_sorted(i, true);
+        delay(12);
+    }
     ui->displayLabel->setText("Quick sort complete.");
     hide_unhide_buttons(true);
 }
@@ -63,6 +67,7 @@ void MainWindow::on_randomizeButton_clicked(bool startup)
     get_random_numbers(numbers);
     for (int i=0; i<50; i++) {
         edit_bar_length(i, numbers[i]);
+        mark_sorted(i, false);
     }
     if (!startup) {
         ui->displayLabel->setText("Numbers have been randomized.");

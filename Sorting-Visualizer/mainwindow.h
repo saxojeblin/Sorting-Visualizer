@@ -31,6 +31,7 @@ private slots:
     int repartition(int* numbers, int low_index, int high_index);
     void insert_number(int* numbers, int position, int high_index, int value);
     void hide_unhide_buttons(bool hide);
+    void mark_sorted(int barNumber, bool sorted);
     /* Core sorting algorithms */
     void bubble_sort(int *numbers);
     void selection_sort(int *numbers);
