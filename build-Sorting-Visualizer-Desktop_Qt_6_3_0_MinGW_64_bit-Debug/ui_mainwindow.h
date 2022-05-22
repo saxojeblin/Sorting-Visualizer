@@ -90,7 +90,8 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(670, 421);
+        MainWindow->resize(669, 420);
+        MainWindow->setStyleSheet(QString::fromUtf8("color: rgb(89, 89, 89);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         bubbleButton = new QPushButton(centralwidget);
@@ -101,69 +102,110 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(bubbleButton->sizePolicy().hasHeightForWidth());
         bubbleButton->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setPointSize(9);
+        font.setBold(true);
+        bubbleButton->setFont(font);
         bubbleButton->setCursor(QCursor(Qt::PointingHandCursor));
+        bubbleButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 108, 82);\n"
+"color: rgb(0, 0, 0);"));
         insertionButton = new QPushButton(centralwidget);
         insertionButton->setObjectName(QString::fromUtf8("insertionButton"));
         insertionButton->setGeometry(QRect(570, 170, 91, 41));
         sizePolicy.setHeightForWidth(insertionButton->sizePolicy().hasHeightForWidth());
         insertionButton->setSizePolicy(sizePolicy);
+        insertionButton->setFont(font);
         insertionButton->setCursor(QCursor(Qt::PointingHandCursor));
+        insertionButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 108, 82);\n"
+"color: rgb(0, 0, 0);"));
         quickButton = new QPushButton(centralwidget);
         quickButton->setObjectName(QString::fromUtf8("quickButton"));
         quickButton->setGeometry(QRect(570, 230, 91, 41));
         sizePolicy.setHeightForWidth(quickButton->sizePolicy().hasHeightForWidth());
         quickButton->setSizePolicy(sizePolicy);
+        quickButton->setFont(font);
         quickButton->setCursor(QCursor(Qt::PointingHandCursor));
+        quickButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 108, 82);\n"
+"color: rgb(0, 0, 0);"));
         selectionButton = new QPushButton(centralwidget);
         selectionButton->setObjectName(QString::fromUtf8("selectionButton"));
         selectionButton->setGeometry(QRect(570, 110, 91, 41));
         sizePolicy.setHeightForWidth(selectionButton->sizePolicy().hasHeightForWidth());
         selectionButton->setSizePolicy(sizePolicy);
+        QFont font1;
+        font1.setPointSize(9);
+        font1.setBold(true);
+        font1.setUnderline(false);
+        selectionButton->setFont(font1);
         selectionButton->setCursor(QCursor(Qt::PointingHandCursor));
+        selectionButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 108, 82);\n"
+"color: rgb(0, 0, 0);"));
         randomizeButton = new QPushButton(centralwidget);
         randomizeButton->setObjectName(QString::fromUtf8("randomizeButton"));
         randomizeButton->setGeometry(QRect(570, 310, 91, 41));
+        randomizeButton->setFont(font);
         randomizeButton->setCursor(QCursor(Qt::PointingHandCursor));
+        randomizeButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 108, 82);\n"
+"color: rgb(0, 0, 0);"));
         exitButton = new QPushButton(centralwidget);
         exitButton->setObjectName(QString::fromUtf8("exitButton"));
         exitButton->setGeometry(QRect(570, 370, 91, 41));
+        QFont font2;
+        font2.setPointSize(9);
+        font2.setBold(true);
+        font2.setItalic(false);
+        font2.setUnderline(true);
+        font2.setStrikeOut(false);
+        exitButton->setFont(font2);
         exitButton->setCursor(QCursor(Qt::PointingHandCursor));
+        exitButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 108, 82);\n"
+"color: rgb(0, 0, 0);"));
         menuLine1 = new QFrame(centralwidget);
         menuLine1->setObjectName(QString::fromUtf8("menuLine1"));
         menuLine1->setGeometry(QRect(540, 0, 41, 421));
+        menuLine1->setStyleSheet(QString::fromUtf8(""));
+        menuLine1->setFrameShadow(QFrame::Plain);
+        menuLine1->setLineWidth(2);
         menuLine1->setFrameShape(QFrame::VLine);
-        menuLine1->setFrameShadow(QFrame::Sunken);
         menuLine2 = new QFrame(centralwidget);
         menuLine2->setObjectName(QString::fromUtf8("menuLine2"));
         menuLine2->setGeometry(QRect(560, 280, 111, 20));
+        menuLine2->setStyleSheet(QString::fromUtf8(""));
+        menuLine2->setFrameShadow(QFrame::Plain);
+        menuLine2->setLineWidth(2);
         menuLine2->setFrameShape(QFrame::HLine);
-        menuLine2->setFrameShadow(QFrame::Sunken);
         menuLabel = new QLabel(centralwidget);
         menuLabel->setObjectName(QString::fromUtf8("menuLabel"));
         menuLabel->setGeometry(QRect(570, 0, 91, 31));
-        QFont font;
-        font.setPointSize(18);
-        font.setBold(false);
-        font.setUnderline(false);
-        menuLabel->setFont(font);
+        QFont font3;
+        font3.setPointSize(18);
+        font3.setBold(false);
+        font3.setUnderline(false);
+        menuLabel->setFont(font3);
         menuLabel->setLayoutDirection(Qt::LeftToRight);
+        menuLabel->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         menuLabel->setAlignment(Qt::AlignCenter);
         menuLine3 = new QFrame(centralwidget);
         menuLine3->setObjectName(QString::fromUtf8("menuLine3"));
         menuLine3->setGeometry(QRect(560, 30, 118, 3));
+        menuLine3->setStyleSheet(QString::fromUtf8(""));
+        menuLine3->setFrameShadow(QFrame::Plain);
+        menuLine3->setLineWidth(2);
         menuLine3->setFrameShape(QFrame::HLine);
-        menuLine3->setFrameShadow(QFrame::Sunken);
         displayLine1 = new QFrame(centralwidget);
         displayLine1->setObjectName(QString::fromUtf8("displayLine1"));
         displayLine1->setGeometry(QRect(0, 350, 561, 20));
+        displayLine1->setStyleSheet(QString::fromUtf8(""));
+        displayLine1->setFrameShadow(QFrame::Plain);
+        displayLine1->setLineWidth(2);
         displayLine1->setFrameShape(QFrame::HLine);
-        displayLine1->setFrameShadow(QFrame::Sunken);
         displayLabel = new QLabel(centralwidget);
         displayLabel->setObjectName(QString::fromUtf8("displayLabel"));
         displayLabel->setGeometry(QRect(0, 359, 561, 61));
-        QFont font1;
-        font1.setPointSize(22);
-        displayLabel->setFont(font1);
+        QFont font4;
+        font4.setPointSize(22);
+        displayLabel->setFont(font4);
+        displayLabel->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         displayLabel->setAlignment(Qt::AlignCenter);
         num1 = new QFrame(centralwidget);
         num1->setObjectName(QString::fromUtf8("num1"));
@@ -173,6 +215,7 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(num1->sizePolicy().hasHeightForWidth());
         num1->setSizePolicy(sizePolicy1);
+        num1->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num1->setFrameShadow(QFrame::Plain);
         num1->setLineWidth(3);
         num1->setMidLineWidth(3);
@@ -182,6 +225,7 @@ public:
         num2->setGeometry(QRect(30, 110, 16, 250));
         sizePolicy1.setHeightForWidth(num2->sizePolicy().hasHeightForWidth());
         num2->setSizePolicy(sizePolicy1);
+        num2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num2->setFrameShadow(QFrame::Plain);
         num2->setLineWidth(3);
         num2->setMidLineWidth(3);
@@ -191,6 +235,7 @@ public:
         num3->setGeometry(QRect(40, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num3->sizePolicy().hasHeightForWidth());
         num3->setSizePolicy(sizePolicy1);
+        num3->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num3->setFrameShadow(QFrame::Plain);
         num3->setLineWidth(3);
         num3->setMidLineWidth(3);
@@ -200,6 +245,7 @@ public:
         num4->setGeometry(QRect(50, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num4->sizePolicy().hasHeightForWidth());
         num4->setSizePolicy(sizePolicy1);
+        num4->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num4->setFrameShadow(QFrame::Plain);
         num4->setLineWidth(3);
         num4->setMidLineWidth(3);
@@ -209,6 +255,7 @@ public:
         num5->setGeometry(QRect(60, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num5->sizePolicy().hasHeightForWidth());
         num5->setSizePolicy(sizePolicy1);
+        num5->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num5->setFrameShadow(QFrame::Plain);
         num5->setLineWidth(3);
         num5->setMidLineWidth(3);
@@ -218,6 +265,7 @@ public:
         num6->setGeometry(QRect(70, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num6->sizePolicy().hasHeightForWidth());
         num6->setSizePolicy(sizePolicy1);
+        num6->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num6->setFrameShadow(QFrame::Plain);
         num6->setLineWidth(3);
         num6->setMidLineWidth(3);
@@ -227,6 +275,7 @@ public:
         num7->setGeometry(QRect(80, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num7->sizePolicy().hasHeightForWidth());
         num7->setSizePolicy(sizePolicy1);
+        num7->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num7->setFrameShadow(QFrame::Plain);
         num7->setLineWidth(3);
         num7->setMidLineWidth(3);
@@ -236,6 +285,7 @@ public:
         num8->setGeometry(QRect(90, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num8->sizePolicy().hasHeightForWidth());
         num8->setSizePolicy(sizePolicy1);
+        num8->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num8->setFrameShadow(QFrame::Plain);
         num8->setLineWidth(3);
         num8->setMidLineWidth(3);
@@ -245,6 +295,7 @@ public:
         num9->setGeometry(QRect(100, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num9->sizePolicy().hasHeightForWidth());
         num9->setSizePolicy(sizePolicy1);
+        num9->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num9->setFrameShadow(QFrame::Plain);
         num9->setLineWidth(3);
         num9->setMidLineWidth(3);
@@ -254,6 +305,7 @@ public:
         num10->setGeometry(QRect(110, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num10->sizePolicy().hasHeightForWidth());
         num10->setSizePolicy(sizePolicy1);
+        num10->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num10->setFrameShadow(QFrame::Plain);
         num10->setLineWidth(3);
         num10->setMidLineWidth(3);
@@ -263,6 +315,7 @@ public:
         num11->setGeometry(QRect(120, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num11->sizePolicy().hasHeightForWidth());
         num11->setSizePolicy(sizePolicy1);
+        num11->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num11->setFrameShadow(QFrame::Plain);
         num11->setLineWidth(3);
         num11->setMidLineWidth(3);
@@ -272,6 +325,7 @@ public:
         num12->setGeometry(QRect(130, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num12->sizePolicy().hasHeightForWidth());
         num12->setSizePolicy(sizePolicy1);
+        num12->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num12->setFrameShadow(QFrame::Plain);
         num12->setLineWidth(3);
         num12->setMidLineWidth(3);
@@ -281,6 +335,7 @@ public:
         num13->setGeometry(QRect(140, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num13->sizePolicy().hasHeightForWidth());
         num13->setSizePolicy(sizePolicy1);
+        num13->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num13->setFrameShadow(QFrame::Plain);
         num13->setLineWidth(3);
         num13->setMidLineWidth(3);
@@ -290,6 +345,7 @@ public:
         num14->setGeometry(QRect(150, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num14->sizePolicy().hasHeightForWidth());
         num14->setSizePolicy(sizePolicy1);
+        num14->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num14->setFrameShadow(QFrame::Plain);
         num14->setLineWidth(3);
         num14->setMidLineWidth(3);
@@ -299,6 +355,7 @@ public:
         num15->setGeometry(QRect(160, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num15->sizePolicy().hasHeightForWidth());
         num15->setSizePolicy(sizePolicy1);
+        num15->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num15->setFrameShadow(QFrame::Plain);
         num15->setLineWidth(3);
         num15->setMidLineWidth(3);
@@ -308,6 +365,7 @@ public:
         num16->setGeometry(QRect(170, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num16->sizePolicy().hasHeightForWidth());
         num16->setSizePolicy(sizePolicy1);
+        num16->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num16->setFrameShadow(QFrame::Plain);
         num16->setLineWidth(3);
         num16->setMidLineWidth(3);
@@ -317,6 +375,7 @@ public:
         num17->setGeometry(QRect(180, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num17->sizePolicy().hasHeightForWidth());
         num17->setSizePolicy(sizePolicy1);
+        num17->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num17->setFrameShadow(QFrame::Plain);
         num17->setLineWidth(3);
         num17->setMidLineWidth(3);
@@ -326,6 +385,7 @@ public:
         num18->setGeometry(QRect(190, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num18->sizePolicy().hasHeightForWidth());
         num18->setSizePolicy(sizePolicy1);
+        num18->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num18->setFrameShadow(QFrame::Plain);
         num18->setLineWidth(3);
         num18->setMidLineWidth(3);
@@ -335,6 +395,7 @@ public:
         num19->setGeometry(QRect(200, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num19->sizePolicy().hasHeightForWidth());
         num19->setSizePolicy(sizePolicy1);
+        num19->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num19->setFrameShadow(QFrame::Plain);
         num19->setLineWidth(3);
         num19->setMidLineWidth(3);
@@ -344,6 +405,7 @@ public:
         num20->setGeometry(QRect(210, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num20->sizePolicy().hasHeightForWidth());
         num20->setSizePolicy(sizePolicy1);
+        num20->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num20->setFrameShadow(QFrame::Plain);
         num20->setLineWidth(3);
         num20->setMidLineWidth(3);
@@ -353,6 +415,7 @@ public:
         num21->setGeometry(QRect(220, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num21->sizePolicy().hasHeightForWidth());
         num21->setSizePolicy(sizePolicy1);
+        num21->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num21->setFrameShadow(QFrame::Plain);
         num21->setLineWidth(3);
         num21->setMidLineWidth(3);
@@ -362,6 +425,7 @@ public:
         num22->setGeometry(QRect(230, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num22->sizePolicy().hasHeightForWidth());
         num22->setSizePolicy(sizePolicy1);
+        num22->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num22->setFrameShadow(QFrame::Plain);
         num22->setLineWidth(3);
         num22->setMidLineWidth(3);
@@ -371,6 +435,7 @@ public:
         num23->setGeometry(QRect(240, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num23->sizePolicy().hasHeightForWidth());
         num23->setSizePolicy(sizePolicy1);
+        num23->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num23->setFrameShadow(QFrame::Plain);
         num23->setLineWidth(3);
         num23->setMidLineWidth(3);
@@ -380,6 +445,7 @@ public:
         num24->setGeometry(QRect(250, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num24->sizePolicy().hasHeightForWidth());
         num24->setSizePolicy(sizePolicy1);
+        num24->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num24->setFrameShadow(QFrame::Plain);
         num24->setLineWidth(3);
         num24->setMidLineWidth(3);
@@ -389,6 +455,7 @@ public:
         num25->setGeometry(QRect(260, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num25->sizePolicy().hasHeightForWidth());
         num25->setSizePolicy(sizePolicy1);
+        num25->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num25->setFrameShadow(QFrame::Plain);
         num25->setLineWidth(3);
         num25->setMidLineWidth(3);
@@ -398,6 +465,7 @@ public:
         num26->setGeometry(QRect(270, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num26->sizePolicy().hasHeightForWidth());
         num26->setSizePolicy(sizePolicy1);
+        num26->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num26->setFrameShadow(QFrame::Plain);
         num26->setLineWidth(3);
         num26->setMidLineWidth(3);
@@ -407,6 +475,7 @@ public:
         num27->setGeometry(QRect(280, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num27->sizePolicy().hasHeightForWidth());
         num27->setSizePolicy(sizePolicy1);
+        num27->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num27->setFrameShadow(QFrame::Plain);
         num27->setLineWidth(3);
         num27->setMidLineWidth(3);
@@ -416,6 +485,7 @@ public:
         num28->setGeometry(QRect(290, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num28->sizePolicy().hasHeightForWidth());
         num28->setSizePolicy(sizePolicy1);
+        num28->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num28->setFrameShadow(QFrame::Plain);
         num28->setLineWidth(3);
         num28->setMidLineWidth(3);
@@ -425,6 +495,7 @@ public:
         num29->setGeometry(QRect(300, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num29->sizePolicy().hasHeightForWidth());
         num29->setSizePolicy(sizePolicy1);
+        num29->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num29->setFrameShadow(QFrame::Plain);
         num29->setLineWidth(3);
         num29->setMidLineWidth(3);
@@ -434,6 +505,7 @@ public:
         num30->setGeometry(QRect(310, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num30->sizePolicy().hasHeightForWidth());
         num30->setSizePolicy(sizePolicy1);
+        num30->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num30->setFrameShadow(QFrame::Plain);
         num30->setLineWidth(3);
         num30->setMidLineWidth(3);
@@ -443,6 +515,7 @@ public:
         num31->setGeometry(QRect(320, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num31->sizePolicy().hasHeightForWidth());
         num31->setSizePolicy(sizePolicy1);
+        num31->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num31->setFrameShadow(QFrame::Plain);
         num31->setLineWidth(3);
         num31->setMidLineWidth(3);
@@ -452,6 +525,7 @@ public:
         num32->setGeometry(QRect(330, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num32->sizePolicy().hasHeightForWidth());
         num32->setSizePolicy(sizePolicy1);
+        num32->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num32->setFrameShadow(QFrame::Plain);
         num32->setLineWidth(3);
         num32->setMidLineWidth(3);
@@ -461,6 +535,7 @@ public:
         num33->setGeometry(QRect(340, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num33->sizePolicy().hasHeightForWidth());
         num33->setSizePolicy(sizePolicy1);
+        num33->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num33->setFrameShadow(QFrame::Plain);
         num33->setLineWidth(3);
         num33->setMidLineWidth(3);
@@ -470,6 +545,7 @@ public:
         num34->setGeometry(QRect(350, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num34->sizePolicy().hasHeightForWidth());
         num34->setSizePolicy(sizePolicy1);
+        num34->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num34->setFrameShadow(QFrame::Plain);
         num34->setLineWidth(3);
         num34->setMidLineWidth(3);
@@ -479,6 +555,7 @@ public:
         num35->setGeometry(QRect(360, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num35->sizePolicy().hasHeightForWidth());
         num35->setSizePolicy(sizePolicy1);
+        num35->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num35->setFrameShadow(QFrame::Plain);
         num35->setLineWidth(3);
         num35->setMidLineWidth(3);
@@ -488,6 +565,7 @@ public:
         num36->setGeometry(QRect(370, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num36->sizePolicy().hasHeightForWidth());
         num36->setSizePolicy(sizePolicy1);
+        num36->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num36->setFrameShadow(QFrame::Plain);
         num36->setLineWidth(3);
         num36->setMidLineWidth(3);
@@ -497,6 +575,7 @@ public:
         num37->setGeometry(QRect(380, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num37->sizePolicy().hasHeightForWidth());
         num37->setSizePolicy(sizePolicy1);
+        num37->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num37->setFrameShadow(QFrame::Plain);
         num37->setLineWidth(3);
         num37->setMidLineWidth(3);
@@ -506,6 +585,7 @@ public:
         num38->setGeometry(QRect(390, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num38->sizePolicy().hasHeightForWidth());
         num38->setSizePolicy(sizePolicy1);
+        num38->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num38->setFrameShadow(QFrame::Plain);
         num38->setLineWidth(3);
         num38->setMidLineWidth(3);
@@ -515,6 +595,7 @@ public:
         num39->setGeometry(QRect(400, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num39->sizePolicy().hasHeightForWidth());
         num39->setSizePolicy(sizePolicy1);
+        num39->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num39->setFrameShadow(QFrame::Plain);
         num39->setLineWidth(3);
         num39->setMidLineWidth(3);
@@ -524,6 +605,7 @@ public:
         num40->setGeometry(QRect(410, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num40->sizePolicy().hasHeightForWidth());
         num40->setSizePolicy(sizePolicy1);
+        num40->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num40->setFrameShadow(QFrame::Plain);
         num40->setLineWidth(3);
         num40->setMidLineWidth(3);
@@ -533,6 +615,7 @@ public:
         num41->setGeometry(QRect(420, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num41->sizePolicy().hasHeightForWidth());
         num41->setSizePolicy(sizePolicy1);
+        num41->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num41->setFrameShadow(QFrame::Plain);
         num41->setLineWidth(3);
         num41->setMidLineWidth(3);
@@ -542,6 +625,7 @@ public:
         num42->setGeometry(QRect(430, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num42->sizePolicy().hasHeightForWidth());
         num42->setSizePolicy(sizePolicy1);
+        num42->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num42->setFrameShadow(QFrame::Plain);
         num42->setLineWidth(3);
         num42->setMidLineWidth(3);
@@ -551,6 +635,7 @@ public:
         num43->setGeometry(QRect(440, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num43->sizePolicy().hasHeightForWidth());
         num43->setSizePolicy(sizePolicy1);
+        num43->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num43->setFrameShadow(QFrame::Plain);
         num43->setLineWidth(3);
         num43->setMidLineWidth(3);
@@ -560,6 +645,7 @@ public:
         num44->setGeometry(QRect(450, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num44->sizePolicy().hasHeightForWidth());
         num44->setSizePolicy(sizePolicy1);
+        num44->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num44->setFrameShadow(QFrame::Plain);
         num44->setLineWidth(3);
         num44->setMidLineWidth(3);
@@ -569,6 +655,7 @@ public:
         num45->setGeometry(QRect(460, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num45->sizePolicy().hasHeightForWidth());
         num45->setSizePolicy(sizePolicy1);
+        num45->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num45->setFrameShadow(QFrame::Plain);
         num45->setLineWidth(3);
         num45->setMidLineWidth(3);
@@ -578,6 +665,7 @@ public:
         num46->setGeometry(QRect(470, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num46->sizePolicy().hasHeightForWidth());
         num46->setSizePolicy(sizePolicy1);
+        num46->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num46->setFrameShadow(QFrame::Plain);
         num46->setLineWidth(3);
         num46->setMidLineWidth(3);
@@ -587,6 +675,7 @@ public:
         num47->setGeometry(QRect(480, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num47->sizePolicy().hasHeightForWidth());
         num47->setSizePolicy(sizePolicy1);
+        num47->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num47->setFrameShadow(QFrame::Plain);
         num47->setLineWidth(3);
         num47->setMidLineWidth(3);
@@ -596,6 +685,7 @@ public:
         num48->setGeometry(QRect(490, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num48->sizePolicy().hasHeightForWidth());
         num48->setSizePolicy(sizePolicy1);
+        num48->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num48->setFrameShadow(QFrame::Plain);
         num48->setLineWidth(3);
         num48->setMidLineWidth(3);
@@ -605,6 +695,7 @@ public:
         num49->setGeometry(QRect(500, 60, 16, 301));
         sizePolicy1.setHeightForWidth(num49->sizePolicy().hasHeightForWidth());
         num49->setSizePolicy(sizePolicy1);
+        num49->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num49->setFrameShadow(QFrame::Plain);
         num49->setLineWidth(3);
         num49->setMidLineWidth(3);
@@ -614,6 +705,7 @@ public:
         num50->setGeometry(QRect(510, 30, 16, 330));
         sizePolicy1.setHeightForWidth(num50->sizePolicy().hasHeightForWidth());
         num50->setSizePolicy(sizePolicy1);
+        num50->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         num50->setFrameShadow(QFrame::Plain);
         num50->setLineWidth(3);
         num50->setMidLineWidth(3);
