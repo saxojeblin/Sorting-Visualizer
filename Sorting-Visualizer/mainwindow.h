@@ -25,6 +25,7 @@ private slots:
     void on_quickButton_clicked();
     void on_randomizeButton_clicked(bool startup);
     void on_exitButton_clicked();
+
     /* Sorting visuals and helpers*/
     void edit_bar_length(int barNumber, int height);
     void swap_numbers(int *numbers, int index1, int index);
@@ -32,6 +33,7 @@ private slots:
     void insert_number(int* numbers, int position, int high_index, int value);
     void hide_unhide_buttons(bool hide);
     void mark_sorted(int barNumber, bool sorted);
+
     /* Core sorting algorithms */
     void bubble_sort(int *numbers);
     void selection_sort(int *numbers);

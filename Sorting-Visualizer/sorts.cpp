@@ -2,7 +2,9 @@
 #include "sorts.hpp"
 #include "mainwindow.h"
 
-/* Swaps two numbers in two indices in an array */
+/* Swaps two numbers in two indices in an array
+ * Also visually shows the swap on the vertical bars
+ */
 void MainWindow::swap_numbers(int *numbers, int index1, int index2) {
     edit_bar_length(index1, numbers[index2]);
     edit_bar_length(index2, numbers[index1]);
@@ -41,17 +43,21 @@ void MainWindow::insert_number(int* numbers, int position, int high_index, int v
 
 /* Finds a pivot index for quick sort */
 int MainWindow::repartition(int* numbers, int low_index, int high_index) {
+    /*Set our pivot number to the high index value and
+    set the pivot index to be the low index */
     int pivot_number = numbers[high_index];
     int pivot_index  = low_index;
-
+    /* Iterate through the subarray */
     for (int i = low_index; i < high_index; i++) {
         delay(20);
+        //Swap numbers if the current number is less than our stored pivot nubmer
         if (numbers[i] < pivot_number) {
             swap_numbers(numbers, pivot_index, i);
             pivot_index++;
         }
     }
     delay(10);
+    //Swap the pivot with the high index
     swap_numbers(numbers, pivot_index, high_index);
     return pivot_index;
 }
@@ -69,6 +75,7 @@ void MainWindow::bubble_sort (int *numbers) {
             }
             delay(10);
         }
+        //Once a value gets into its correct spot, mark it sorted
         mark_sorted(i, true);
     }
 }
@@ -91,6 +98,7 @@ void MainWindow::selection_sort (int *numbers) {
             mark_sorted(i, true);
             delay(150);
         }
+        //Once a value gets into its correct spot, mark it sorted
         mark_sorted(i, true);
     }
 }
@@ -113,6 +121,7 @@ void MainWindow::insertion_sort (int* numbers) {
         }
     }
     for (i = 49; i >=0; i--) {
+        //Mark the entire array sorted once the entire array has been iterated through
         mark_sorted(i, true);
         delay(12);
     }

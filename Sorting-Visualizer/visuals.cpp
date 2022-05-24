@@ -2,6 +2,17 @@
 #include "ui_mainwindow.h"
 #include "sorts.hpp"
 
+/* The function delay() is pivotal for the visualizer, because modern computers are
+ * usually able to compute these sorts in less than a second.
+ *
+ * A visualizer would be pointless if we couldn't see the sort happen in real time,
+ * step by step, so throughout the sorting functions in sorts.cpp, we implement delays
+ * to show the user critical changes in the vertical bars.
+ *
+ * This allows the user to really see how each algorithm works, rather than just going
+ * from unsorted to sorted in the blink of an eye.
+ */
+
 /* Stops program for given milleseconds */
 void delay(int mseconds) {
     QTime dieTime= QTime::currentTime().addMSecs(mseconds);
@@ -9,7 +20,9 @@ void delay(int mseconds) {
             QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }
 
-/* Hides/Unhides all buttons (except exit) */
+/* Hides/Unhides all buttons (except exit)
+ *(buttons should be disabled when a sort is active)
+ */
 void MainWindow::hide_unhide_buttons(bool hide) {
     ui->bubbleButton->setEnabled(hide);
     ui->selectionButton->setEnabled(hide);
@@ -18,9 +31,13 @@ void MainWindow::hide_unhide_buttons(bool hide) {
     ui->randomizeButton->setEnabled(hide);
 }
 
-/* Changes bar color to green (its sorted) */
+/* Changes bar color to green (its sorted)
+ * (This function follows the same logic as edit_bar_length(), so refer to that
+ * for more information (mainly about the switch statement).)
+*/
 void MainWindow::mark_sorted(int barNumber, bool sorted) {
     QString color;
+    /* Get the appropiate color needed to change to (either black or green) */
     if (sorted) {
         color = "color: #009B1C;";
     }
